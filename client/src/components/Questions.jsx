@@ -14,7 +14,7 @@ function Questions() {
   const [userAnswer, setUserAnswer] = useState({});
   const [timer, setTimer] = useState(60);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
-  const [isAnswered, setIsAnswered] = useState(false); // Track if the question is answered
+  const [isAnswered, setIsAnswered] = useState(false); 
 
   const handelSend = async () => {
     try {
@@ -34,7 +34,7 @@ function Questions() {
   };
 
   const checkAnswer = (option, correctAnswer) => {
-    if (isAnswered) return; // Prevent answering again once it's already answered
+    if (isAnswered) return; 
     
     setUserAnswer((prevState) => ({
       ...prevState,
@@ -44,7 +44,7 @@ function Questions() {
     if (option === correctAnswer) {
       setScore(score + 1);
     }
-    setIsAnswered(true); // Mark the question as answered
+    setIsAnswered(true); 
   };
 
   useEffect(() => {
@@ -54,7 +54,7 @@ function Questions() {
   useEffect(() => {
     setTimer(60);
     setIsTimerRunning(true);
-    setIsAnswered(false); // Reset for the new question
+    setIsAnswered(false); 
 
     const timerInterval = setInterval(() => {
       if (timer > 0 && isTimerRunning) {
@@ -78,7 +78,7 @@ function Questions() {
   const goToNextQuestion = () => {
     if (currentQuestionIndex < 9) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setIsAnswered(false); // Reset for the next question
+      setIsAnswered(false); 
     } else {
       navigate(`/result/${score}`);
     }
@@ -87,7 +87,7 @@ function Questions() {
   const goToPreviousQuestion = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
-      setIsAnswered(false); // Reset for the previous question
+      setIsAnswered(false);
     }
   };
 

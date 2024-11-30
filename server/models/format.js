@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Define a schema for your quiz collections
 const formatSchema = new mongoose.Schema({
   question: {
     type: String,
@@ -16,5 +15,5 @@ const formatSchema = new mongoose.Schema({
   },
 });
 
-// Export the schema but without binding it to a collection
+
 module.exports = formatSchema;

@@ -4,13 +4,13 @@ import { useUser } from "../context/contextApi";
 
 function Landing() {
   const navigate = useNavigate();
-  const [named, setNamed] = useState(""); // State to store the username
-  const { setUsername } = useUser(); // Get the setUsername function from context
+  const [named, setNamed] = useState(""); 
+  const { setUsername } = useUser(); 
 
   const handleUsernameChange = (e) => {
     const username = e.target.value;
-    setNamed(username); // Update local state for username
-    setUsername(username); // Update global username state via context
+    setNamed(username); 
+    setUsername(username); 
   };
 
   return (
@@ -38,15 +38,15 @@ function Landing() {
             type="text"
             placeholder="Username"
             className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={named} // Bind input field to local state (named)
-            onChange={handleUsernameChange} // Set username on change
+            value={named} 
+            onChange={handleUsernameChange} 
           />
 
           <button
             type="submit"
             className="w-full mt-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            disabled={!named} // Disable button if username is empty
-            onClick={() => navigate("/chooseOne")} // Navigate to the next page when clicked
+            disabled={!named} 
+            onClick={() => navigate("/chooseOne")} 
           >
             Start Quiz
           </button>

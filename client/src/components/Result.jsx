@@ -12,7 +12,7 @@ function Result() {
         return {
             message: "You are Haruday or wot? 🎉",
             emoji: "🥳",
-            image: "https://example.com/genius-image.jpg", // Replace with your image URL
+            image: "https://example.com/genius-image.jpg", 
         };
         }
 
@@ -20,19 +20,19 @@ function Result() {
       return {
         message: "You are the man! 💪🏆",
         emoji: "🎉",
-        image: "https://example.com/you-are-the-man-image.jpg", // Replace with your image URL
+        image: "https://example.com/you-are-the-man-image.jpg", 
       };
     } else if (score >= 5) {
       return {
         message: "Good, but you can do better! 🤔",
         emoji: "😎",
-        image: "https://example.com/good-but-better-image.jpg", // Replace with your image URL
+        image: "https://example.com/good-but-better-image.jpg", 
       };
     } else {
       return {
         message: "Try Again! 😓",
         emoji: "💔",
-        image: "https://example.com/try-again-image.jpg", // Replace with your image URL
+        image: "https://example.com/try-again-image.jpg", 
       };
     }
   };
